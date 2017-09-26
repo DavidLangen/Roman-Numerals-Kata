@@ -2,9 +2,11 @@ package mainProgram;
 
 public class RomanNumeralsKata {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static String romanNumeralsEncoder(int n){
+		return "";
 	}
-
+	
+	public static int romanNumeralsDecoder(String s){
+		return 0;
+	}
 }
