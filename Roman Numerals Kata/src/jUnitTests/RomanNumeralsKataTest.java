@@ -70,9 +70,9 @@ public class RomanNumeralsKataTest {
 	
 	@Test
 	public void testZufaelligeVierstelligeZahlenEncoder(){
-		assertEquals("CMXCIX", RomanNumeralsKataProgram.romanNumeralsEncoder(2959));
-		assertEquals("CCLXIII", RomanNumeralsKataProgram.romanNumeralsEncoder(1763));
-		assertEquals("DLXXII", RomanNumeralsKataProgram.romanNumeralsEncoder(2017));
+		assertEquals("MMCMLIX", RomanNumeralsKataProgram.romanNumeralsEncoder(2959));
+		assertEquals("MDCCLXIII", RomanNumeralsKataProgram.romanNumeralsEncoder(1763));
+		assertEquals("MMXVII", RomanNumeralsKataProgram.romanNumeralsEncoder(2017));
 	}
 	
 	public void testMaxWertEncoder(){
