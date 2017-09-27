@@ -35,10 +35,51 @@ public class RomanNumeralsKataTest {
 	}
 	
 	@Test
-	public void testZufaelligeZweistelligeZahlen(){
+	public void testFuenfzigEncoder(){
+		assertEquals("L", RomanNumeralsKataProgram.romanNumeralsEncoder(50));
+	}
+	
+	@Test
+	public void testZufaelligeZweistelligeZahlenEncoder(){
 		assertEquals("XLII", RomanNumeralsKataProgram.romanNumeralsEncoder(42));
 		assertEquals("XXVI", RomanNumeralsKataProgram.romanNumeralsEncoder(26));
 		assertEquals("LXXII", RomanNumeralsKataProgram.romanNumeralsEncoder(72));
 	}
+	
+	@Test
+	public void testHundertEncoder(){
+		assertEquals("C", RomanNumeralsKataProgram.romanNumeralsEncoder(100));
+	}
+	
+	@Test
+	public void testFuenfHundertEncoder(){
+		assertEquals("D", RomanNumeralsKataProgram.romanNumeralsEncoder(500));
+	}
+	
+	@Test
+	public void testZufaelligeDreistelligeZahlenEncoder(){
+		assertEquals("CMXCIX", RomanNumeralsKataProgram.romanNumeralsEncoder(999));
+		assertEquals("CCLXIII", RomanNumeralsKataProgram.romanNumeralsEncoder(263));
+		assertEquals("DLXXII", RomanNumeralsKataProgram.romanNumeralsEncoder(572));
+	}
+	
+	@Test
+	public void testTausendEncoder(){
+		assertEquals("M", RomanNumeralsKataProgram.romanNumeralsEncoder(1000));
+	}
+	
+	@Test
+	public void testZufaelligeVierstelligeZahlenEncoder(){
+		assertEquals("CMXCIX", RomanNumeralsKataProgram.romanNumeralsEncoder(2959));
+		assertEquals("CCLXIII", RomanNumeralsKataProgram.romanNumeralsEncoder(1763));
+		assertEquals("DLXXII", RomanNumeralsKataProgram.romanNumeralsEncoder(2017));
+	}
+	
+	public void testMaxWertEncoder(){
+		assertEquals("MMMDCDXCIX", RomanNumeralsKataProgram.romanNumeralsEncoder(3999));
+	}
+	
+	
+	
 	
 }
