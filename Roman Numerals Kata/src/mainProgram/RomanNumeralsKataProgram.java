@@ -11,10 +11,27 @@ public class RomanNumeralsKataProgram {
 		if(n<=0){
 			return "";
 		}
+		
 		String ergebnis= "";
-		for (int i = 0; i < n; i++) {
-			ergebnis += "I";
+		int rest_n = n;
+		
+		String[] r_zeichen = {"V","IV","I"};
+		int[] r_werte = {5,4,1}; 
+		
+		if(n<=3){
+			for (int i = 0; i < n; i++) {
+				ergebnis += "I";
+			}
+		}else{
+			
+			for (int j = 0; j < r_werte.length; j++) {
+				if(rest_n-r_werte[j] >= 0){
+					ergebnis+= r_zeichen[j];
+					rest_n-= r_werte[j];
+				}
+			}
 		}
+		
 		
 		return ergebnis;
 	}

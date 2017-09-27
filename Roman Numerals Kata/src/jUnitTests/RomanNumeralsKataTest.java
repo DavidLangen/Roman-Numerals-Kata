@@ -26,7 +26,7 @@ public class RomanNumeralsKataTest {
 	
 	@Test
 	public void testFuenf(){
-		assertEquals("V", RomanNumeralsKataProgram.romanNumeralsEncoder(4));
+		assertEquals("V", RomanNumeralsKataProgram.romanNumeralsEncoder(5));
 	}
 	
 }
