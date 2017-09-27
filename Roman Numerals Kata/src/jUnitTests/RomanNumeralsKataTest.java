@@ -5,7 +5,8 @@ import org.junit.Test;
 import mainProgram.RomanNumeralsKataProgram;
 
 public class RomanNumeralsKataTest {
-
+	
+	/*--EncoderTests--*/
 	@Test
 	public void testEinsZweiDreiEncoder() {
 		assertEquals("I", RomanNumeralsKataProgram.romanNumeralsEncoder(1));
@@ -77,6 +78,34 @@ public class RomanNumeralsKataTest {
 	
 	public void testMaxWertEncoder(){
 		assertEquals("MMMDCDXCIX", RomanNumeralsKataProgram.romanNumeralsEncoder(3999));
+	}
+	
+	
+	/*--DecoderTests--*/
+	
+	@Test
+	public void testEinsZweiDreiDecoder(){
+		assertEquals(1, RomanNumeralsKataProgram.romanNumeralsDecoder("I"));
+		assertEquals(2, RomanNumeralsKataProgram.romanNumeralsDecoder("II"));
+		assertEquals(3, RomanNumeralsKataProgram.romanNumeralsDecoder("III"));
+	}
+	
+	public void testLeererStringDecoder(){
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder(""));
+	}
+	
+	public void testUngueltigerBuchstabeDecoder(){
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("DAVID"));
+	}
+	
+	@Test
+	public void testVierDecoder(){
+		assertEquals(4, RomanNumeralsKataProgram.romanNumeralsDecoder("IV"));
+	}
+	
+	@Test
+	public void testFuenfDecoder(){
+		assertEquals(5, RomanNumeralsKataProgram.romanNumeralsDecoder("V"));
 	}
 	
 	
