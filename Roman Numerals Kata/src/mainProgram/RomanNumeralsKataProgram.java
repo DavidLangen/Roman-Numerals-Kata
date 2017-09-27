@@ -33,7 +33,7 @@ public class RomanNumeralsKataProgram {
 	public static int romanNumeralsDecoder(String s){
 		s = s.toUpperCase();
 		
-		if(s.matches(".*I{2,}[VX]{1}.*")){
+		if(s.matches(".*I{2,}[VX]{1}.*") || s.matches(".*[VX]{1}I{4,}.*")){
 			return -1;
 		}
 		
@@ -46,14 +46,11 @@ public class RomanNumeralsKataProgram {
 			
 			for (int i = r_zeichen.length-1; i >= 0  && !restString.isEmpty(); i--) {
 				
-				String letztesZ = restString.substring(restString.length()-1, restString.length());
-				String letzteBZ = "";
-				
-				if(restString.length()-2 >= 0)
-				 letzteBZ = restString.substring(restString.length()-2, restString.length());
-				
-				if(r_zeichen[i].equals(letzteBZ) || r_zeichen[i].equals(letztesZ)){
+				if(restString.matches(".*"+r_zeichen[i]+"$")){
 					ergebnis+=r_werte[i];
+					if(ergebnis > 3999){
+						return -1;
+					}
 					int index = restString.lastIndexOf(r_zeichen[i]);
 					restString = restString.substring(0,index);
 					i=r_zeichen.length;
