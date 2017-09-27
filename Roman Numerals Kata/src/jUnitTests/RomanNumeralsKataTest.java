@@ -90,11 +90,25 @@ public class RomanNumeralsKataTest {
 		assertEquals(3, RomanNumeralsKataProgram.romanNumeralsDecoder("III"));
 	}
 	
+	@Test
 	public void testLeererStringDecoder(){
 		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder(""));
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder(" "));
 	}
 	
-	public void testUngueltigerBuchstabeDecoder(){
+	@Test
+	public void testKleinbuchstabenDecoder(){
+		assertEquals(3, RomanNumeralsKataProgram.romanNumeralsDecoder("iii"));
+		assertEquals(4, RomanNumeralsKataProgram.romanNumeralsDecoder("iv"));
+	}
+	
+	@Test
+	public void testUngueltigeRoemischeZahlDecoder(){
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("IIV"));
+	}
+	
+	@Test
+	public void testUngueltigeBuchstabenDecoder(){
 		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("DAVID"));
 	}
 	
@@ -154,6 +168,7 @@ public class RomanNumeralsKataTest {
 		assertEquals(2017, RomanNumeralsKataProgram.romanNumeralsDecoder("MMXVII"));
 	}
 	
+	@Test
 	public void testMaxWertDecoder(){
 		assertEquals(3999, RomanNumeralsKataProgram.romanNumeralsDecoder("MMMDCDXCIX"));
 		
