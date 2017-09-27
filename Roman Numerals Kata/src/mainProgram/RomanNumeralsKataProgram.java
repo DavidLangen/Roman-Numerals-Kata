@@ -14,5 +14,4 @@ public class RomanNumeralsKataProgram {
 	public static int romanNumeralsDecoder(String s){
 		return 0;
 	}
-
 }
