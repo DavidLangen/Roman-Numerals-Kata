@@ -1,0 +1,40 @@
+# Diese viminfo-Datei wurde von Vim 8.0 generiert.
+# Sie können sie verändern, wenn Sie vorsichtig vorgehen!
+
+# Viminfo version
+|1,4
+
+# Wert von 'encoding', als diese Datei geschrieben wurde
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Befehlszeile Geschichte (neueste bis älteste):
+
+# Suchausdruck Geschichte (neueste bis älteste):
+
+# Ausdruck Geschichte (neueste bis älteste):
+
+# Eingabe-Zeile Geschichte (neueste bis älteste):
+
+# Debug Line Geschichte (neueste bis älteste):
+
+# Register:
+
+# Datei-Marken:
+'0  1  0  ~/.git/COMMIT_EDITMSG
+|4,48,1,0,1506522991,"~/.git/COMMIT_EDITMSG"
+
+# Geschichte (neueste zuerst):
+-'  1  0  ~/.git/COMMIT_EDITMSG
+|4,39,1,0,1506522991,"~/.git/COMMIT_EDITMSG"
+
+# Geschichte der Markierungen innerhalb von Dateien (neueste zuerst):
+
+> ~/.git/COMMIT_EDITMSG
+	*	1506522769	0
+	"	1	0
+	.	1	0
+	+	3	64
+	+	1	0
