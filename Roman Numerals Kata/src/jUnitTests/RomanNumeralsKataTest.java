@@ -12,4 +12,9 @@ public class RomanNumeralsKataTest {
 		assertEquals("II", RomanNumeralsKataProgram.romanNumeralsEncoder(2));
 		assertEquals("III", RomanNumeralsKataProgram.romanNumeralsEncoder(3));
 	}
+	
+	@Test
+	public void testNegativEncoder(){
+		assertEquals("", RomanNumeralsKataProgram.romanNumeralsEncoder(-1));
+	}
 }
