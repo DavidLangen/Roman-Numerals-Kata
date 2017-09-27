@@ -105,6 +105,17 @@ public class RomanNumeralsKataTest {
 	@Test
 	public void testUngueltigeRoemischeZahlDecoder(){
 		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("IIV"));
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("IIIV"));
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("IIIV"));
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("VIIII"));
+		
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("IIX"));
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("IIIX"));
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("XIIII"));
+		
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("MMMMMMM"));
+		
+		assertEquals(-1, RomanNumeralsKataProgram.romanNumeralsDecoder("IIIX"));
 	}
 	
 	@Test

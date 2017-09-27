@@ -31,6 +31,12 @@ public class RomanNumeralsKataProgram {
 	}
 	
 	public static int romanNumeralsDecoder(String s){
+		s = s.toUpperCase();
+		
+		if(s.matches(".*I{2,}[VX]{1}.*")){
+			return -1;
+		}
+		
 		if(s.matches("[MCDXLVI]+")){
 			int ergebnis = 0;
 			String restString = s;
