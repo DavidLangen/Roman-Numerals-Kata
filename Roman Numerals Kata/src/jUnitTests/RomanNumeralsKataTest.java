@@ -20,13 +20,25 @@ public class RomanNumeralsKataTest {
 	}
 	
 	@Test
-	public void testVier(){
+	public void testVierEncoder(){
 		assertEquals("IV", RomanNumeralsKataProgram.romanNumeralsEncoder(4));
 	}
 	
 	@Test
-	public void testFuenf(){
+	public void testFuenfEncoder(){
 		assertEquals("V", RomanNumeralsKataProgram.romanNumeralsEncoder(5));
+	}
+	
+	@Test
+	public void testZehnEncoder(){
+		assertEquals("X",RomanNumeralsKataProgram.romanNumeralsEncoder(10));
+	}
+	
+	@Test
+	public void testZufaelligeZweistelligeZahlen(){
+		assertEquals("XLII", RomanNumeralsKataProgram.romanNumeralsEncoder(42));
+		assertEquals("XXVI", RomanNumeralsKataProgram.romanNumeralsEncoder(26));
+		assertEquals("LXXII", RomanNumeralsKataProgram.romanNumeralsEncoder(72));
 	}
 	
 }
