@@ -13,7 +13,7 @@ public class RomanNumeralsKataProgram {
 		final char encodeZeichen = 'e';
 		final char decodeZeichen = 'd';
 		final char beendenZeichen = 'x';
-		boolean wiederholen = true;
+		boolean wiederholen = false;
 		
 		
 		char[] zeichen = {encodeZeichen,decodeZeichen,beendenZeichen};
@@ -59,10 +59,44 @@ public class RomanNumeralsKataProgram {
 		char eingabe = scan.next().charAt(0);
 		switch (eingabe) {
 			case encodeZeichen :
-				
+				String u1 = "Von Ganzahl nach römische Zahl";
+				for (int i = 0; i <= breite; i++) {
+					if(i == breite/2){
+						System.out.print(u1);
+					}else{
+						System.out.print("*");
+					}
+					
+				}
+				System.out.println();
+				System.out.print("Deine Zahl:");
+				int eingabeEncoder = scan.nextInt();
+				String roemischeZahl = romanNumeralsEncoder(eingabeEncoder);
+				System.out.println("\nAls römische Zahl:"+roemischeZahl+"\n");
+				for (int i = 0; i <= breite+u1.length()-1; i++) {
+					System.out.print("*");
+				}
+				wiederholen = true;
 				break;
 			case decodeZeichen :
-						
+				String u2 = "Von_Ganzzahl_nach_römische_Zahl";
+				for (int i = 0; i <= breite; i++) {
+					if(i == breite/2){
+						System.out.print(u2);
+					}else{
+						System.out.print("*");
+					}
+					
+				}
+				System.out.println();
+				System.out.print("Deine römische Zahl:");
+				String eingabeDecoder = scan.next();
+				int ganzzahl = romanNumeralsDecoder(eingabeDecoder);
+				System.out.println("\nAls Ganzzahl:"+ganzzahl+"\n");
+				for (int i = 0; i <= breite+u2.length()-1; i++) {
+					System.out.print("*");
+				}
+				wiederholen = true;
 				break;
 			case beendenZeichen :
 				wiederholen = false;
