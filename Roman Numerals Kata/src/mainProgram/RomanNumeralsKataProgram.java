@@ -8,24 +8,26 @@ public class RomanNumeralsKataProgram {
 		
 		//Einstellungen fürs Interface
 		String ueberschrift = " Menü ";
-		int breite = 20;
+		int breite = 50;
 		
-		char encodeZeichen = 'e';
-		char decodeZeichen = 'd';
-		char beendenZeichen = 'x';
-		
+		final char encodeZeichen = 'e';
+		final char decodeZeichen = 'd';
+		final char beendenZeichen = 'x';
+		boolean wiederholen = true;
 		
 		
 		char[] zeichen = {encodeZeichen,decodeZeichen,beendenZeichen};
 		String[] text = {"um von Ganzzahl nach römische Zahl...",
 						 "um von römischer Zahl nach Ganzzahl...",
 						 "das Programm zu beenden."};
-		int zeichenIndex = 0;
+		
 		int hoehe = zeichen.length*2;
 		
 		
 		Scanner scan = new Scanner(System.in);
 		
+		do{
+		int zeichenIndex = 0;
 		
 		for (int i = 0; i <= breite; i++) {
 			if(i == breite/2){
@@ -53,10 +55,28 @@ public class RomanNumeralsKataProgram {
 		for (int i = 0; i <= breite+ueberschrift.length()-1; i++) {
 			System.out.print("*");
 		}
-		System.out.println("\nEingabe:");
-		
+		System.out.print("\nEingabe:");
+		char eingabe = scan.next().charAt(0);
+		switch (eingabe) {
+			case encodeZeichen :
+				
+				break;
+			case decodeZeichen :
+						
+				break;
+			case beendenZeichen :
+				wiederholen = false;
+				break;
+	
+			default:
+				wiederholen = true;
+				break;
+		}
+		System.out.println();
+		}while(wiederholen);
 		
 		scan.close();
+		System.out.println("\n...Das Programm wurde beendet.");
 
 	}
 	
