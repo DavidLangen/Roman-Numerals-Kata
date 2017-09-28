@@ -1,9 +1,62 @@
 package mainProgram;
 
+import java.util.Scanner;
+
 public class RomanNumeralsKataProgram {
 
 	public static void main(String[] args) {
 		
+		//Einstellungen fürs Interface
+		String ueberschrift = " Menü ";
+		int breite = 20;
+		
+		char encodeZeichen = 'e';
+		char decodeZeichen = 'd';
+		char beendenZeichen = 'x';
+		
+		
+		
+		char[] zeichen = {encodeZeichen,decodeZeichen,beendenZeichen};
+		String[] text = {"um von Ganzzahl nach römische Zahl...",
+						 "um von römischer Zahl nach Ganzzahl...",
+						 "das Programm zu beenden."};
+		int zeichenIndex = 0;
+		int hoehe = zeichen.length*2;
+		
+		
+		Scanner scan = new Scanner(System.in);
+		
+		
+		for (int i = 0; i <= breite; i++) {
+			if(i == breite/2){
+				System.out.print(ueberschrift);
+			}else{
+				System.out.print("*");
+			}
+			
+		}
+		System.out.println();
+		System.out.println("Drücken Sie ...");
+		System.out.println();
+		for (int i = 0; i <= hoehe && zeichenIndex < zeichen.length; i++) {
+			if(i%2 == 0){
+				System.out.println("- ("+zeichen[zeichenIndex]+") ..."+text[zeichenIndex]);
+				zeichenIndex++;
+			}else{
+				System.out.println("");
+			}
+			
+		}
+		System.out.println();
+		System.out.println("... zu übersetzen");
+		System.out.println();
+		for (int i = 0; i <= breite+ueberschrift.length()-1; i++) {
+			System.out.print("*");
+		}
+		System.out.println("\nEingabe:");
+		
+		
+		scan.close();
 
 	}
 	
