@@ -27,7 +27,6 @@ public class RomanNumeralsKataProgram {
 	public static void main(String[] args) {
 
 		
-		
 		do{
 			
 		int zeichenIndex = 0;
@@ -50,7 +49,7 @@ public class RomanNumeralsKataProgram {
 				wiederholen = true;
 				break;
 			case decodeZeichen :
-				String ueberschriftDecoder = " Von_Ganzzahl_nach_römische_Zahl ";
+				String ueberschriftDecoder = " Von Ganzzahl nach römischer Zahl ";
 				printHeader(ueberschriftDecoder);
 				
 				System.out.println();
@@ -122,7 +121,7 @@ public class RomanNumeralsKataProgram {
 	}
 	
 	public static String romanNumeralsEncoder(int n){
-		if(n<=0){
+		if(n<=0 || n> 3999){
 			return "";
 		}
 		

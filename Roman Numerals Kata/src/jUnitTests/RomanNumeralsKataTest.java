@@ -75,9 +75,13 @@ public class RomanNumeralsKataTest {
 		assertEquals("MDCCLXIII", RomanNumeralsKataProgram.romanNumeralsEncoder(1763));
 		assertEquals("MMXVII", RomanNumeralsKataProgram.romanNumeralsEncoder(2017));
 	}
-	
+	@Test
 	public void testMaxWertEncoder(){
-		assertEquals("MMMDCDXCIX", RomanNumeralsKataProgram.romanNumeralsEncoder(3999));
+		assertEquals("MMMCMXCIX", RomanNumeralsKataProgram.romanNumeralsEncoder(3999));
+	}
+	@Test
+	public void testGroeﬂerMaxWertEncoder(){
+		assertEquals("", RomanNumeralsKataProgram.romanNumeralsEncoder(4000));
 	}
 	
 	
